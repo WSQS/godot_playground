@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://xtoc3lh6aj7y"]
+
+[ext_resource type="Script" uid="uid://clwxmk45co2km" path="res://scripts/mesh.gd" id="1_glbkm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_glbkm"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_glbkm"]
+
+[node name="Mesh" type="Node3D"]
+script = ExtResource("1_glbkm")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.937913, 0.34687, 0, -0.34687, 0.937913, -0.0015012, 0.138311, 1.16752)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -1)
+mesh = SubResource("BoxMesh_glbkm")
+
+[node name="ProceduralMeshInstance3d" type="ProceduralMeshInstance3d" parent="MeshInstance3D"]
+array_mesh = SubResource("ArrayMesh_glbkm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.937913, 0.34687, 0, -0.34687, 0.937913, -0.0015012, 2.17356, 1.16752)
