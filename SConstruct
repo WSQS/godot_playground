@@ -2,6 +2,8 @@
 import os
 import sys
 
+project_name = "playground"
+
 env = SConscript("godot-cpp/SConstruct")
 
 # For reference:
@@ -18,32 +20,40 @@ sources = Glob("src/*.cpp")
 
 if env["platform"] == "macos":
     library = env.SharedLibrary(
-        "demo/bin/libgdexample.{}.{}.framework/libgdexample.{}.{}".format(
-            env["platform"], env["target"], env["platform"], env["target"]
+        "{}/bin/libgdexample.{}.{}.framework/libgdexample.{}.{}".format(
+            project_name, env["platform"], env["target"], env["platform"], env["target"]
         ),
         source=sources,
     )
 elif env["platform"] == "ios":
     if env["ios_simulator"]:
         library = env.StaticLibrary(
-            "demo/bin/libgdexample.{}.{}.simulator.a".format(env["platform"], env["target"]),
+            "{}/bin/libgdexample.{}.{}.simulator.a".format(
+                project_name, env["platform"], env["target"]
+            ),
             source=sources,
         )
     else:
         library = env.StaticLibrary(
-            "demo/bin/libgdexample.{}.{}.a".format(env["platform"], env["target"]),
+            "{}/bin/libgdexample.{}.{}.a".format(
+                project_name, env["platform"], env["target"]
+            ),
             source=sources,
         )
 elif env["platform"] == "linux":
     env["CXXFLAGS"].remove("-std=c++17")
     env["CXXFLAGS"].append("-std=c++20")
     library = env.SharedLibrary(
-        "playground/bin/libgdexample{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+        "{}/bin/libgdexample{}{}".format(
+            project_name, env["suffix"], env["SHLIBSUFFIX"]
+        ),
         source=sources,
     )
 else:
     library = env.SharedLibrary(
-        "playground/bin/libgdexample{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+        "{}/bin/libgdexample{}{}".format(
+            project_name, env["suffix"], env["SHLIBSUFFIX"]
+        ),
         source=sources,
     )
 
