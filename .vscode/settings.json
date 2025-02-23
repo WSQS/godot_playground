@@ -1,0 +1,6 @@
+{
+    "clangd.checkUpdates": true,
+    "clangd.arguments": [
+        "--compile-commands-dir=/home/sophomore/Documents/cpp/godot_playground"
+    ]
+}

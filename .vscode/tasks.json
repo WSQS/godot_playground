@@ -6,7 +6,7 @@
         {
             "label": "scons",
             "type": "shell",
-            "command": "/home/sophomore/miniconda3/bin/scons"
+            "command": "/home/sophomore/miniconda3/bin/scons compiledb=true use_llvm=true"
         }
     ]
 }
