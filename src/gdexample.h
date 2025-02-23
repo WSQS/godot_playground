@@ -3,7 +3,7 @@
 
 #include <godot_cpp/classes/sprite2d.hpp>
 
-namespace godot {
+using namespace godot;
 
 class GDExample : public Sprite2D {
 	GDCLASS(GDExample, Sprite2D)
@@ -21,6 +21,5 @@ public:
 	void _process(double delta) override;
 };
 
-}
 
 #endif
