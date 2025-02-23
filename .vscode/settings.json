@@ -2,5 +2,9 @@
     "clangd.checkUpdates": true,
     "clangd.arguments": [
         "--compile-commands-dir=/home/sophomore/Documents/cpp/godot_playground"
-    ]
+    ],
+    "editor.indentSize": 2,
+    "cSpell.words": [
+        "GDCLASS"
+    ],
 }
