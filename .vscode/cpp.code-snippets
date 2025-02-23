@@ -12,8 +12,12 @@
 		"body": [
 			"class ${1:class_name} : public ${2:parent_name} {",
 			"GDCLASS(${1:class_name}, ${2:parent_name})",
+			"",
 			"protected:",
 			"  static void _bind_methods();",
+			"",
+			"  ${1:class_name}();",
+			"  ~${1:class_name}();",
 			"};"
 		],
 		"description": "add class"
