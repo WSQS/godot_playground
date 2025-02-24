@@ -1,7 +1,7 @@
 #include "register_types.h"
 
 #include "gdexample.h"
-#include "procdural_mesh_instance_3d.h"
+#include "procedural_mesh_instance_3d.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
