@@ -8,7 +8,7 @@
         "name": "Linux Edirot Launch",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/../godot/bin/godot.linuxbsd.editor.x86_64",
+        "program": "${workspaceFolder}/../godot/bin/godot.linuxbsd.editor.dev.x86_64",
         "args": ["--path","${workspaceFolder}/playground","-e" , "-v"],
         "cwd": "${fileDirname}",
         "preLaunchTask": "scons"
